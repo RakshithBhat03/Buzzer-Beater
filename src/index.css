@@ -8,6 +8,7 @@
   --bb-color-bg-dark-gray: rgba(255, 255, 255, 0.2);
   --bb-color-bg-material-gray: #555;
   --bb-color-bg-tab: rgba(0, 0, 0, 0.15);
+  --bb-color-bg-light-gray: rgba(255, 255, 255, 0.1);
 }
 html,
 body,
