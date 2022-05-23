@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider } from "./context";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import { TaskProvider, ThemeProvider, ModalProvider } from "./context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <ThemeProvider>
-        <App />
+        <TaskProvider>
+          <ModalProvider>
+            <App />
+          </ModalProvider>
+        </TaskProvider>
       </ThemeProvider>
     </Router>
   </React.StrictMode>
