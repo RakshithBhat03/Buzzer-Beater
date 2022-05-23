@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Nav } from "./components/";
+import { BLUE, DARK, DARK_BLUE, DEFAULT } from "./constants";
+import { useTheme } from "./context";
+import AllRoutes from "./routes/AllRoutes";
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={`wrapper ${theme === DEFAULT && `theme-default`} ${
+        theme === DARK && `theme-dark`
+      }
+      ${theme === BLUE && `theme-blue`}
+      ${theme === DARK_BLUE && `theme-dark-blue`}`}>
+      <Nav />
+      <AllRoutes />
     </div>
   );
 }
