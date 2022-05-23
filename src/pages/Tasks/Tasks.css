@@ -1,0 +1,12 @@
+.tasks-wrapper {
+  max-width: 50rem;
+  height: calc(100vh - 50px);
+  opacity: 0.9;
+  opacity: 0.9;
+}
+.tasks-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 70%;
+  border-radius: var(--radius-sm);
+}
