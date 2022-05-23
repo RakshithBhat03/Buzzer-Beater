@@ -2,7 +2,6 @@ import React from "react";
 import { AddFirstTask } from "../../components";
 import "./Tasks.css";
 import { useDocumentTitle } from "../../hooks";
-import "./Tasks.css";
 function Tasks() {
   useDocumentTitle("Tasks | Buzzer Beater");
   return (
