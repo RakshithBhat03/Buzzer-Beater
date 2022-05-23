@@ -1,0 +1,15 @@
+.landing-page-wrapper {
+  max-width: 50rem;
+  height: 100vh;
+  margin-top: 7.5rem;
+}
+
+.hero-img {
+  width: 25rem;
+}
+.btn-hero {
+  background-color: var(--bb-color-bg-dark-gray);
+  opacity: 0.9;
+  font-size: 1.5rem;
+  border-radius: var(--radius-md);
+}
