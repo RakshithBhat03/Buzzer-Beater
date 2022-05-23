@@ -3,21 +3,21 @@
   min-width: 100vw;
 }
 .theme-default {
-  background-color: rgb(217, 85, 80);
-  color: rgb(217, 85, 80);
+  background-color: var(--bb-primary-color);
+  color: var(--bb-primary-color);
 }
 .theme-dark {
-  background-color: rgb(85, 85, 85);
-  color: rgb(85, 85, 85);
+  background-color: var(--bb-color-gray);
+  color: var(--bb-color-gray);
 }
 .theme-blue {
-  background-color: rgb(76, 145, 149);
-  color: rgb(76, 145, 149);
+  background-color: var(--bb-color-blue);
+  color: var(--bb-color-blue);
 }
 .theme-dark-blue {
-  background-color: rgb(69, 124, 163);
-  color: rgb(69, 124, 163);
+  background-color: var(--bb-color-dark-blue);
+  color: var(--bb-color-dark-blue);
 }
 .color-text-gray {
-  color: rgb(85, 85, 85);
+  color: var(--bb-color-gray);
 }

@@ -6,7 +6,7 @@
 }
 .tasks-container {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bb-color-bg-light-gray);
   height: 70%;
   border-radius: var(--radius-sm);
 }
