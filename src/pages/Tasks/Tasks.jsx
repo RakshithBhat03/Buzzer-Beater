@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { ShowAllTasks, AddFirstTask } from "../../components/";
+import { useDocumentTitle } from "../../hooks";
 import { useTask } from "../../context";
 import { setLocalStorage } from "../../utils/localStorage";
 
 import "./Tasks.css";
 function Tasks() {
+  useDocumentTitle("Tasks | Buzzer Beater");
   const { task } = useTask();
   useEffect(() => {
     setLocalStorage("task", task);
