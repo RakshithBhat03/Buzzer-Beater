@@ -17,7 +17,7 @@
 .btn_timer {
   background-color: var(--color-white);
   color: inherit;
-  font-size: 1.5rem;
+  font-size: var(--size-11);
   border-radius: var(--radius-sm);
 }
 .btn_tab {
@@ -40,7 +40,7 @@
 }
 .task_name,
 .task_description {
-  font-size: 1.5rem;
+  font-size: var(--size-11);
   color: var(--bb-color-gray);
   background-color: var(--bb-color-bg-white);
   width: 100%;
@@ -48,7 +48,7 @@
   box-shadow: var(--card-box-shadow);
 }
 .task_title {
-  font-size: 1.5rem;
+  font-size: var(--size-11);
   background-color: var(--bb-color-bg-tab);
   border-radius: var(--radius-sm);
 }
