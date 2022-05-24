@@ -7,6 +7,7 @@ import {
   TOGGLE_TIMER_START,
   TIME_REMAINING,
   RESET_TIMER,
+  SWITCH_TAB,
 } from "../constants";
 import { v4 as uuid } from "uuid";
 import { setLocalStorage } from "../utils/localStorage";
@@ -73,6 +74,19 @@ export const taskReducer = (state, { type, payload }) => {
       setLocalStorage("task", resetTimer);
       return [...resetTimer];
 
+    case SWITCH_TAB:
+      const switchTabTask = state.map((task) => {
+        if (task.id === payload.id) {
+          return {
+            ...task,
+            tab: payload.tab,
+          };
+        } else {
+          return task;
+        }
+      });
+      setLocalStorage("task", switchTabTask);
+      return [...switchTabTask];
     default:
       return { ...state };
   }
