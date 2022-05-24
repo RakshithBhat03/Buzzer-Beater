@@ -14,6 +14,7 @@ export const INITIAL_TASK_STATE = {
     return Number(this.timerPomodoro) * 60;
   },
   isTimerPaused: false,
+  tab: "FOCUS",
 };
 export const TASK_NAME = "TASK_NAME";
 export const TASK_DESCRIPTION = "TASK_DESCRIPTION";
@@ -37,3 +38,4 @@ export const RESET_TIMER = "RESET_TIMER";
 export const FOCUS = "FOCUS";
 export const SHORT_BREAK = "SHORT_BREAK";
 export const LONG_BREAK = "LONG_BREAK";
+export const SWITCH_TAB = "SWITCH_TAB";

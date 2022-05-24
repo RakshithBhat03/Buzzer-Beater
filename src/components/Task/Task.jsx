@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { DELETE_TASK, TOGGLE_CHECKED } from "../../constants";
 import { useModal, useTask } from "../../context";
 import { setLocalStorage } from "../../utils/localStorage";
@@ -8,6 +9,7 @@ function Task({ task }) {
   const { setModal } = useModal();
   const { dispatch } = useTask();
   const { isChecked, taskName, timeRemaining } = task;
+  const navigate = useNavigate();
   return (
     <div
       className={`task-container width-100 display-flex align-items-center justify-content-between mb-9 ${
@@ -21,7 +23,9 @@ function Task({ task }) {
           onChange={() => dispatch({ type: TOGGLE_CHECKED, payload: task })}
         />
       </div>
-      <div className="task-details display-flex align-items-center justify-content-center">
+      <div
+        onClick={() => navigate(`/tasks/${task.id}`)}
+        className="task-details display-flex align-items-center justify-content-center">
         <p className="txt-md ml-9 pb-3 color-text-gray">{taskName}</p>
         <p className="ml-9 task-details-timer">
           <i className="fas fa-stopwatch"></i> {Math.floor(timeRemaining / 60)}
