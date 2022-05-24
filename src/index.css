@@ -9,6 +9,9 @@
   --bb-color-bg-material-gray: #555;
   --bb-color-bg-tab: rgba(0, 0, 0, 0.15);
   --bb-color-bg-light-gray: rgba(255, 255, 255, 0.1);
+  --bb-color-bg-modal: rgba(0, 0, 0, 0.25);
+  --bb-color-bg-input-white: rgb(239, 239, 239);
+  --bb-color-bg-button: rgb(34, 34, 34);
 }
 html,
 body,
