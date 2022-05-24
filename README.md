@@ -47,8 +47,8 @@
 ## Resources
 
 - [ClutchUI](https://clutchui.netlify.app)
-- [Unsplash](https://unsplash.com/)
+- [Undraw](https://undraw.co/)
 
 ## Demo
 
-![Preview](https://res.cloudinary.com/clutchaf/image/upload/v1653394033/Buzzer%20Beater/Buzzer-beater-overview_qszaon.gif)
+![Preview](/public/Buzzer-beater-overview.gif)
