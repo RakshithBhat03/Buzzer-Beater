@@ -28,14 +28,8 @@ function Modal() {
     task ?? INITIAL_TASK_STATE
   );
   const { dispatch: taskDispatch } = useTask();
-  const {
-    taskName,
-    taskDescription,
-    timerPomodoro,
-    timerShort,
-    timerLong,
-    timeRemaining,
-  } = taskDeatails;
+  const { taskName, taskDescription, timerPomodoro, timerShort, timerLong } =
+    taskDeatails;
   const handleSubmit = (e) => {
     e.preventDefault();
     task
@@ -43,7 +37,6 @@ function Modal() {
       : taskDispatch({ type: ADD_TASK, payload: taskDeatails });
     setModal((modal) => !modal);
   };
-  console.log(timerPomodoro, timeRemaining);
   return (
     <div className="modal-background display-flex justify-content-center align-items-center">
       <div className="modal-container display-flex p-9 flex-col gap-1">

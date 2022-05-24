@@ -1,0 +1,59 @@
+.timer_wrapper {
+  max-width: 30rem;
+  min-height: 50vh;
+  color: inherit;
+}
+.timer_container {
+  width: 30rem;
+  background-color: var(--bb-color-bg-light-gray);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--card-box-shadow);
+}
+.timer {
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+.btn_timer {
+  background-color: var(--color-white);
+  color: inherit;
+  font-size: var(--size-11);
+  border-radius: var(--radius-sm);
+}
+.btn_tab {
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+}
+.btn_tab:hover {
+  background-color: var(--bb-color-bg-tab);
+}
+
+.task {
+  border-radius: var(--radius-sm);
+  min-height: 4rem;
+}
+.task_name {
+  text-transform: capitalize;
+}
+.task_description {
+  word-wrap: break-word;
+}
+.task_name,
+.task_description {
+  font-size: var(--size-11);
+  color: var(--bb-color-gray);
+  background-color: var(--bb-color-bg-white);
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--card-box-shadow);
+}
+.task_title {
+  font-size: var(--size-11);
+  background-color: var(--bb-color-bg-tab);
+  border-radius: var(--radius-sm);
+}
+
+/* Tabs */
+.active_tab {
+  background-color: rgba(0, 0, 0, 0.15);
+}
