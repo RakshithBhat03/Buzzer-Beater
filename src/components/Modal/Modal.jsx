@@ -1,6 +1,6 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import { useModal, useTask } from "../../context";
-import { getLocalStorage } from "../../utils/localStorage";
+import { getLocalStorage, setLocalStorage } from "../../utils/localStorage";
 import {
   INITIAL_TASK_STATE,
   TASK_NAME,
@@ -27,7 +27,7 @@ function Modal() {
     taskDetailsReducer,
     task ?? INITIAL_TASK_STATE
   );
-  const { dispatch: taskDispatch } = useTask();
+  const { task: userTask, dispatch: taskDispatch } = useTask();
   const { taskName, taskDescription, timerPomodoro, timerShort, timerLong } =
     taskDeatails;
   const handleSubmit = (e) => {
@@ -37,6 +37,10 @@ function Modal() {
       : taskDispatch({ type: ADD_TASK, payload: taskDeatails });
     setModal((modal) => !modal);
   };
+  useEffect(() => {
+    setLocalStorage(task, userTask);
+  }, [userTask]);
+
   return (
     <div className="modal-background display-flex justify-content-center align-items-center">
       <div className="modal-container display-flex p-9 flex-col gap-1">
