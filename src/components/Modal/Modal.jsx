@@ -38,7 +38,7 @@ function Modal() {
     setModal((modal) => !modal);
   };
   useEffect(() => {
-    setLocalStorage(task, userTask);
+    setLocalStorage("task", userTask);
   }, [userTask]);
 
   return (
