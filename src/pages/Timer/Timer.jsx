@@ -13,13 +13,13 @@ import {
 } from "../../constants";
 import { useTask, useTheme } from "../../context";
 import { useDocumentTitle } from "../../hooks";
-import { getLocalStorage } from "../../utils/localStorage";
+import { getLocalStorage, setLocalStorage } from "../../utils/localStorage";
 import style from "./Timer.module.css";
 
 function Timer() {
   const { setTheme } = useTheme();
   const { taskId } = useParams();
-  const { dispatch } = useTask();
+  const { task, dispatch } = useTask();
   const allTasks = getLocalStorage("task");
   const currentTask = allTasks.filter((task) => task.id === taskId)[0];
   const [hasTimerStarted, setHasTimerStarted] = useState(
@@ -129,6 +129,9 @@ function Timer() {
         break;
     }
   }, [activeTab]); // eslint-disable-line
+  useEffect(() => {
+    setLocalStorage("task", task);
+  }, [task]);
 
   //   Update document title
   useDocumentTitle(
@@ -140,33 +143,33 @@ function Timer() {
       className={`${style.timer_wrapper} display-flex flex-col gap-1 justify-content-center mx-auto my-9`}>
       <div
         className={`${style.timer_container} mx-auto p-9 display-flex flex-col align-items-center`}>
-        <div className={`${style.timer_tabs} display-flex gap-1`}>
+        <div className={`${style.timer_tabs} display-flex gap-1 `}>
           <button
             onClick={() => setActiveTab(FOCUS)}
             className={`${style.btn_tab} ${
               activeTab === FOCUS && style.active_tab
-            } txt-semibold txt-white px-5 py-3`}>
+            } txt-semibold txt-white px-8 py-4`}>
             Pomodoro
           </button>
           <button
             onClick={() => setActiveTab(SHORT_BREAK)}
             className={`${style.btn_tab} ${
               activeTab === SHORT_BREAK && style.active_tab
-            } txt-semibold txt-white px-5 py-3`}>
+            } txt-semibold txt-white px-8 py-4`}>
             Short Break
           </button>
           <button
             onClick={() => setActiveTab(LONG_BREAK)}
             className={`${style.btn_tab} ${
               activeTab === LONG_BREAK && style.active_tab
-            } txt-semibold txt-white px-5 py-3`}>
+            } txt-semibold txt-white px-8 py-4`}>
             Long Break
           </button>
         </div>
         <div className={`display-flex justify-content-center m-9`}>
-          <p className={style.timer}>
+          <span className={style.timer}>
             {minutes}:{seconds}
-          </p>
+          </span>
         </div>
         <div className="display-flex gap-1 align-items-center justify-content-center">
           <button

@@ -10,7 +10,6 @@ import {
   SWITCH_TAB,
 } from "../constants";
 import { v4 as uuid } from "uuid";
-import { setLocalStorage } from "../utils/localStorage";
 export const taskReducer = (state, { type, payload }) => {
   switch (type) {
     case ADD_TASK:
@@ -44,7 +43,6 @@ export const taskReducer = (state, { type, payload }) => {
       const updateAllTasks = state.map((task) =>
         task.id === payload.id ? updatedTask : task
       );
-      setLocalStorage("task", updateAllTasks);
       return [...updateAllTasks];
 
     case TIME_REMAINING:
@@ -55,7 +53,6 @@ export const taskReducer = (state, { type, payload }) => {
           return task;
         }
       });
-      setLocalStorage("task", updatedTime);
       return [...updatedTime];
 
     case RESET_TIMER:
@@ -71,7 +68,6 @@ export const taskReducer = (state, { type, payload }) => {
           return task;
         }
       });
-      setLocalStorage("task", resetTimer);
       return [...resetTimer];
 
     case SWITCH_TAB:
@@ -85,7 +81,6 @@ export const taskReducer = (state, { type, payload }) => {
           return task;
         }
       });
-      setLocalStorage("task", switchTabTask);
       return [...switchTabTask];
     default:
       return { ...state };

@@ -11,6 +11,7 @@
 }
 .timer {
   font-size: 7rem;
+  line-height: normal;
   font-weight: 700;
   color: var(--color-white);
 }

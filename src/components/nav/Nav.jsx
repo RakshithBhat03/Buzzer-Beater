@@ -1,12 +1,22 @@
 import React, { useEffect } from "react";
 import "./Nav.css";
-import { Link } from "react-router-dom";
-import { useTheme } from "../../context";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth, useTheme } from "../../context";
 import { DARK, DEFAULT } from "../../constants";
 import { setLocalStorage } from "../../utils/localStorage";
+import { ShowToast } from "../";
 
 function Nav() {
   const { theme, setTheme } = useTheme();
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/");
+      ShowToast({ type: "success", message: "Logged out" });
+    } catch (error) {}
+  };
   useEffect(() => {
     if (theme === DARK || theme === DEFAULT) {
       setLocalStorage("theme", theme);
@@ -26,6 +36,17 @@ function Nav() {
             href="https://github.com/RakshithBhat03/Buzzer-Beater">
             <i className="fab fa-github"></i> Github
           </a>
+          {currentUser?.uid ? (
+            <button
+              onClick={handleLogout}
+              className="txt-white nav-icon p-5 px-8">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="txt-white nav-icon p-5 px-8">
+              Login
+            </Link>
+          )}
           <button
             onClick={() =>
               theme === DEFAULT ? setTheme(DARK) : setTheme(DEFAULT)
