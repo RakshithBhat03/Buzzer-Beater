@@ -3,9 +3,15 @@
   height: 100vh;
   margin-top: 7.5rem;
 }
-
+.landing-page-container {
+  width: 100%;
+  height: auto;
+}
 .hero-img {
-  width: 25rem;
+  height: 40vh;
+}
+.img--responsive {
+  height: 100%;
 }
 .btn-hero {
   background-color: var(--bb-color-bg-dark-gray);
