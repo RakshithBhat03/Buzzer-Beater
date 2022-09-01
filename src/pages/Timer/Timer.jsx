@@ -20,8 +20,7 @@ function Timer() {
   const { setTheme } = useTheme();
   const { taskId } = useParams();
   const { task, dispatch } = useTask();
-  const allTasks = getLocalStorage("task");
-  const currentTask = allTasks.filter((task) => task.id === taskId)[0];
+  const currentTask = task.filter((task) => task.id === taskId)[0];
   const [hasTimerStarted, setHasTimerStarted] = useState(
     currentTask.hasTimerStarted ?? false
   );
@@ -81,7 +80,7 @@ function Timer() {
   };
 
   useEffect(() => {
-    setActiveTab(FOCUS);
+    setActiveTab(tab);
     return () => {
       clearInterval(timerRef.current);
     };
