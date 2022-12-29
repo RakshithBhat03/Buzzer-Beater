@@ -34,7 +34,7 @@ function Nav() {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/RakshithBhat03/Buzzer-Beater">
-            <i className="fab fa-github"></i> Github
+            <i className="fab fa-github"></i> <span>Github</span>
           </a>
           {currentUser?.uid ? (
             <button
