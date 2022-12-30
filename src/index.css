@@ -19,5 +19,10 @@ body,
 .App {
   height: 100%;
   width: 100%;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
 }

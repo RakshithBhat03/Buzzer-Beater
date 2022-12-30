@@ -1,6 +1,6 @@
 .timer_wrapper {
   max-width: 30rem;
-  min-height: 50vh;
+  min-height: 100%;
   color: inherit;
 }
 .timer_container {
