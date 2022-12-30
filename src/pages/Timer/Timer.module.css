@@ -58,3 +58,56 @@
 .active_tab {
   background-color: rgba(0, 0, 0, 0.15);
 }
+
+@media screen and (max-width: 768px) {
+  .timer_container {
+    width: 27rem;
+  }
+  .btn_tab {
+    font-size: 0.75rem;
+  }
+  .timer {
+    font-size: 5rem;
+  }
+  .btn_timer {
+    font-size: 1rem;
+  }
+  .btn_timer i {
+    font-size: 1.75rem;
+  }
+  .task_info {
+    width: 27rem;
+    margin-inline: auto;
+  }
+  .task_title,
+  .task_name,
+  .task_description {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .timer_container {
+    width: 20rem;
+  }
+  .btn_tab {
+    padding: 0.5rem 0.5rem;
+  }
+  .timer {
+    font-size: 4rem;
+  }
+  .btn_timer {
+    font-size: 0.75rem;
+  }
+  .btn_timer i {
+    font-size: 1.5rem;
+  }
+  .task_info {
+    width: 20rem;
+    margin-inline: auto;
+  }
+  .task_title,
+  .task_name,
+  .task_description {
+    font-size: 1rem;
+  }
+}

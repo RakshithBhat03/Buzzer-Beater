@@ -80,3 +80,17 @@ input::-webkit-inner-spin-button {
   background-color: var(--bb-color-bg-gray);
   background-color: var(--bb-color-bg-button);
 }
+
+@media screen and (max-width: 480px) {
+  .modal-container {
+    min-width: 15rem;
+    min-height: 15rem;
+  }
+  .task-input,
+  .task-textarea {
+    font-size: 1rem;
+  }
+  .timer-input {
+    font-size: 0.75rem;
+  }
+}

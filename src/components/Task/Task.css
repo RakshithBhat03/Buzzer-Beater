@@ -50,3 +50,23 @@
   flex-grow: 1;
   height: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  .task-title {
+    font-size: 1.25rem;
+    max-width: 6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .task-details-timer {
+    font-size: 1rem;
+  }
+  .task-checkbox {
+    height: 1rem;
+    width: 1rem;
+  }
+  .btn-task-cta {
+    font-size: 1rem;
+  }
+}
