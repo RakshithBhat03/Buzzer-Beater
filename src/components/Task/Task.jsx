@@ -26,7 +26,9 @@ function Task({ task }) {
       <div
         onClick={() => navigate(`/tasks/${task.id}`)}
         className="task-details display-flex align-items-center justify-content-center">
-        <p className="txt-md ml-9 pb-3 color-text-gray">{taskName}</p>
+        <p className="txt-md ml-9 pb-3 color-text-gray task-title">
+          {taskName}
+        </p>
         <p className="ml-9 task-details-timer">
           <i className="fas fa-stopwatch"></i> {Math.floor(timeRemaining / 60)}
         </p>

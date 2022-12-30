@@ -51,3 +51,24 @@
 .btn-guest-login:hover {
   color: var(--color-black);
 }
+
+@media screen and (max-width: 480px) {
+  .login-wrapper {
+    min-width: 20rem;
+  }
+  .login-wrapper h2 {
+    font-size: 2rem;
+  }
+  .form-input,
+  .form-btn,
+  .form-btn-secondary {
+    font-size: 1rem;
+  }
+  .btn-guest-login {
+    font-size: 0.9rem;
+  }
+  .btn-password-visibility {
+    font-size: 0.75rem;
+    top: 10px;
+  }
+}

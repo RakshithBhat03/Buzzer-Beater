@@ -190,7 +190,8 @@ function Timer() {
           </button>
         </div>
       </div>
-      <div className="task-info display-flex flex-col gap-1 align-items-center justify-content-center">
+      <div
+        className={`${style.task_info} display-flex flex-col gap-1 align-items-center justify-content-center`}>
         <div
           className={`${style.task} txt-white width-100 display-flex gap-1 justify-content-start align-items-center`}>
           <span className={`${style.task_title} px-9 py-5`}>Task</span>
